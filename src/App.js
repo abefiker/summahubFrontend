@@ -22,6 +22,13 @@ function App() {
   //     name: "woman dancing"
   //   }
   // ];
+  function showAdditional(additional) {
+    const alertInformation = Object.entries(additional)
+     .map(information => `${information[0]}: ${information[1]}`)
+     .join('\n');
+    alert(alertInformation)
+    };
+    
   return (
     // <div className="container">
     //   <h1 id={greeting}>Hello from SummaHub</h1>
@@ -48,6 +55,7 @@ function App() {
         name={animal.name}
         scientificName={animal.scientificName}
         size={animal.size}
+        showAdditional = {showAdditional}
       />)}
     </div>
   );
